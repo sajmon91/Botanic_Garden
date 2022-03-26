@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@300;400;700&display=swap');
+
+/* font-family: 'Libre Baskerville', serif;  for headings*/
+
+/* font-family: 'Roboto', sans-serif; */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	outline: none;
+	text-decoration: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+}
+
+:root {
+	--primary: #475f45;
+	--header-text: #343d33;
+	--body-text: #414840;
+	--light: #fff;
+}
+
+.primary-btn {
+	background-color: var(--primary);
+	color: var(--light);
+	font-size: 1.4rem;
+	padding: 1.5rem 3rem;
+	border: .2rem solid var(--primary);
+	cursor: pointer;
+	font-weight: bold;
+	text-transform: uppercase;
+	box-shadow: 0 .5rem 2rem .2rem rgba(31, 32, 32, 0.2);
+	transition: all .3s ease-in-out;
+}
+
+.primary-btn:hover {
+	background-color: var(--light);
+	color: var(--primary);
+}
+
+.secondary-btn {
+	border: .2rem solid var(--primary);
+	font-size: 1.4rem;
+	cursor: pointer;
+	font-weight: bold;
+	color: var(--primary);
+	text-transform: uppercase;
+	padding: 1.5rem 3rem;
+	box-shadow: 0 .5rem 2rem .2rem rgba(31, 32, 32, 0.2);
+	transition: all .3s ease-in-out;
+	background-color: transparent;
+}
+
+.secondary-btn:hover {
+	background-color: var(--primary);
+	color: var(--light);
+}
+
+.discover-btn {
+	border: .2rem solid var(--light);
+	font-size: 1.4rem;
+	cursor: pointer;
+	font-weight: bold;
+	color: var(--light);
+	text-transform: uppercase;
+	padding: 1.5rem 3rem;
+	box-shadow: 0 .5rem 2rem .2rem rgba(31, 32, 32, 0.2);
+	transition: all .3s ease-in-out;
+	background-color: transparent;
+}
+
+.discover-btn:hover {
+	background-color: var(--light);
+	color: var(--primary);
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5rem 20rem;
+}
+
+nav .nav-logo {
+	display: flex;
+	align-items: center;
+}
+
+nav .nav-logo img {
+	width: 6rem;
+	height: 6rem;
+	margin-right: 1rem;
+}
+nav .nav-logo .logo-text h1 {
+	font-size: 2.3rem;
+	color: var(--primary);
+}
+nav .nav-logo .logo-text p {
+	font-size: 1.5rem;
+	color: #333;
+}
+
+nav .nav-links {
+	display: flex;
+	align-items: center;
+}
+
+nav .nav-links .nav-link,
+nav .nav-links .nav-cta {
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--primary);
+	cursor: pointer;
+}
+nav .nav-links .nav-link {
+	margin-right: 4rem;
+	position: relative;
+}
+nav .nav-links .nav-link::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: .3rem;
+	left: 0;
+	bottom: 0;
+	background-color: var(--primary);
+	transform-origin: left;
+	transform: scale(0, 1);
+	transition: all .3s ease-in-out;
+}
+nav .nav-links .nav-link:hover::after {
+	transform: scale(1, 1);
+}
+/* ***************************** hero section */
+.hero {
+	padding: 10rem 20rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero-text h1 {
+	font-size: 5.7rem;
+	color: var(--header-text);
+	margin-bottom: 1.6rem;
+}
+.hero-text p {
+	font-size: 2.5rem;
+	color: var(--body-text);
+	font-weight: 300;
+	width: 47rem;
+	margin-bottom: 3.2rem;
+}
+.hero-buttons .primary-btn {
+	margin-right: 1.6rem;
+}
+
+.hero-border {
+	border: .4rem solid rgba(52, 61, 51, .4);
+	border-radius: 50rem 50rem 0 0;
+	padding: .5rem;
+	height: 66rem;
+}
+
+.hero-border img {
+	height: 100%;
+}
+
+/* ****************************** discover section */
+.discover {
+	padding: 10rem 0;
+	background-color: var(--header-text);
+	color: var(--light);
+	position: relative;
+}
+.discover-wrapper {
+	width: 100%;
+	max-width: 110rem;
+	margin: 0 auto;
+}
+.discover-top {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8rem;
+}
+.discover-top img {
+	width: 100%;
+	max-width: 54rem;
+	min-width: 34rem;
+}
+.discover-top .discover-text {
+	margin-left: 9rem;
+}
+.discover-top .discover-text h2 {
+	font-size: 4.5rem;
+	margin-bottom: 3.2rem;
+}
+.discover-top .discover-text p {
+	font-size: 2rem;
+	width: 40rem;
+	margin-bottom: 3.2rem;
+}
+.discover-bottom img {
+	width: 100%;
+}
+.discover-plant {
+	position: absolute;
+	top: 30%;
+	right: 0;
+}
+
+/* ********************************* news section */
+
+.news {
+	padding: 10rem 20rem;
+}
+.news-head {
+	margin-bottom: 4.8rem;
+}
+.news-head h2 {
+	font-size: 4.5rem;
+	color: var(--header-text);
+	margin-bottom: 1.6rem;
+}
+.news-head a {
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: var(--primary);
+	position: relative;
+	padding-left: 13rem;
+	align-items: center;
+}
+.news-head a::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: .8rem;
+	width: 11rem;
+	height: 2px;
+	background-color: var(--primary);
+	opacity: .4;
+}
+.news-head a img {
+	width: 2.4rem;
+	height: 2.4rem;
+	vertical-align: middle;
+	transform: translateX(0);
+	transition: all .5s;
+}
+.news-head a:hover img {
+	transform: translateX(.5rem);
+}
+
+.news-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+.main-news {
+	max-width: 52rem;
+	min-width: 34rem;
+}
+.main-news img {
+	width: 100%;
+}
+.main-news-text {
+	padding: 2rem 2.5rem;
+}
+
+.news-wrapper h3 {
+	font-size: 2.3rem;
+	font-weight: 400;
+	color: var(--primary);
+	margin-bottom: 1.2rem;
+}
+.news-wrapper p {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--body-text);
+	margin-bottom: 1rem;
+}
+
+.small-news {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+}
+
+.small-news:not(:last-child) {
+	border-bottom: .2rem solid #c4c4c4;
+}
+
+.news-text {
+	padding: 1.5rem 2rem;
+}
+
+/* ************************************* footer */
+
+.footer-top {
+	display: flex;
+	justify-content: space-between;
+	padding: 4.8rem 20rem 0 20rem;
+	background-color: var(--body-text);
+	color: var(--light);
+}
+.footer-logo {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.footer-logo img {
+	width: 4.8rem;
+	height: 4.8rem;
+	margin-right: 1.2rem;
+}
+.footer-logo .logo-text h1 {
+	font-size: 1.9rem;
+}
+.footer-logo .logo-text p {
+	font-size: 1.2rem;
+}
+.footer-text {
+	font-size: 1.6rem;
+	font-weight: 400;
+	width: 27rem;
+	margin-bottom: 6rem;
+}
+.footer-middle h3 {
+	font-size: 1.6rem;
+	font-weight: 400;
+	margin-bottom: 2rem;
+}
+.footer-links {
+	margin-bottom: 4rem;
+}
+.footer-link {
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+	cursor: pointer;
+	position: relative;
+	width: fit-content;
+}
+.footer-link::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: .2rem;
+	left: 0;
+	bottom: 0;
+	background-color: var(--light);
+	transform-origin: left;
+	transform: scale(0, 1);
+	transition: all .3s ease-in-out;
+}
+.footer-link:hover::after {
+	transform: scale(1, 1);
+}
+.footer-social h3 {
+	font-size: 1.6rem;
+	font-weight: 400;
+	margin-bottom: 2rem;
+}
+.social a {
+	padding: 1rem;
+	border-radius: 50%;
+	display: inline-block;
+	transition: all .3s;
+}
+.social a:hover {
+	background-color: var(--header-text);
+}
+.social a:not(:last-child) {
+	margin-right: 3.2rem;
+}
+.social a img {
+	width: 2.4rem;
+	height: 2.4rem;
+}
+.footer-bottom {
+	background-color: var(--header-text);
+	text-align: center;
+	font-size: 1.4rem;
+	color: var(--light);
+	padding: 3rem 0;
+}
