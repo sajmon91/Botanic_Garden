@@ -102,6 +102,7 @@ nav.nav {
 nav.nav .nav-logo {
 	display: flex;
 	align-items: center;
+	opacity: 0;
 }
 
 nav.nav .nav-logo img {
@@ -151,6 +152,15 @@ nav.nav .nav-links .nav-link:hover::after {
 	transform: scale(1, 1);
 }
 
+.nav-anim {
+	transform: translateY(-100%);
+	opacity: 0;
+}
+
+.memb {
+	opacity: 0;
+}
+
 .menu-circle {
 	display: none;
 	opacity: 0;
@@ -163,6 +173,7 @@ nav.nav .nav-links .nav-link:hover::after {
 	align-items: center;
 	transition: all 0.3s;
 	z-index: 20;
+	transform: translateX(300px);
 }
 
 .menu-btn {
@@ -263,6 +274,8 @@ nav.nav-bar img {
 	font-size: 5.7rem;
 	color: var(--header-text);
 	margin-bottom: 1.6rem;
+	opacity: 0;
+	transform: translateY(40px);
 }
 .hero-text p {
 	font-size: 2.5rem;
@@ -270,9 +283,16 @@ nav.nav-bar img {
 	font-weight: 300;
 	width: 47rem;
 	margin-bottom: 3.2rem;
+	opacity: 0;
+	transform: translateY(40px);
 }
 .hero-buttons .primary-btn {
 	margin-right: 1.6rem;
+}
+
+.hero-buttons .primary-btn,
+.hero-buttons .secondary-btn {
+	opacity: 0;
 }
 
 .hero-border {
@@ -280,10 +300,13 @@ nav.nav-bar img {
 	border-radius: 50rem 50rem 0 0;
 	padding: .5rem;
 	height: 66rem;
+	clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
 .hero-border img {
 	height: 100%;
+	transform: translate(0, 40px) scale(0.85);
+	clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
 /* ****************************** discover section */
@@ -292,6 +315,7 @@ nav.nav-bar img {
 	background-color: var(--header-text);
 	color: var(--light);
 	position: relative;
+	overflow: hidden;
 }
 .discover-wrapper {
 	width: 100%;
@@ -307,9 +331,12 @@ nav.nav-bar img {
 	width: 100%;
 	max-width: 54rem;
 	z-index: 5;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 .discover-top .discover-text {
 	margin-left: 9rem;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+	transform: translateY(40px);
 }
 .discover-top .discover-text h2 {
 	font-size: 4.5rem;
@@ -322,6 +349,7 @@ nav.nav-bar img {
 }
 .discover-bottom img {
 	width: 100%;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 .discover-plant {
 	position: absolute;
@@ -329,6 +357,8 @@ nav.nav-bar img {
 	right: 0;
 	pointer-events: none;
 	z-index: 1;
+	clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+	transform: scale(1.2);
 }
 
 /* ********************************* news section */
@@ -384,6 +414,7 @@ nav.nav-bar img {
 }
 .main-news img {
 	width: 100%;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 .main-news-text {
 	padding: 2rem 2.5rem;
@@ -439,6 +470,7 @@ nav.nav-bar img {
 	margin-bottom: 2rem;
 	padding-bottom: 2rem;
 	transition: all 0.3s ease-in-out;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
 
 .small-news:hover,
@@ -546,6 +578,7 @@ nav.nav-bar ul li:hover::after {
 	font-size: 1.4rem;
 	color: var(--light);
 	padding: 3rem 0;
+	overflow: hidden;
 }
 
 /* ****************************** responsive */
